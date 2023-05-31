@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color GREEN PALETE*/
+  --green-primary-1: hsl(162, 61%, 89%);
+  --green-primary-2: hsl(162, 60%, 78%);
+  --green-primary-3: hsl(162, 61%, 67%);
+  --green-primary-4: hsl(162, 61%, 57%);
+  /* primary/main color */
+  --green-primary-5: rgb(32, 203, 152);
+  /* lighter shades of primary color */
+  --green-primary-6: #1aa179;
+  --green-primary-7: #13795b;
+  --green-primary-8: #0d503c;
+  --green-primary-9: #06281e;
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(212, 33%, 89%);
+  --clr-grey-2: hsl(210, 31%, 80%);
+  --clr-grey-3: hsl(211, 27%, 70%);
+  --clr-grey-4: hsl(209, 23%, 60%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 28%, 39%);
+  --clr-grey-7: hsl(209, 34%, 30%);
+  --clr-grey-8: hsl(211, 39%, 23%);
+  --clr-grey-9: hsl(209, 61%, 16%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+  --max-width: 73rem;
+  --fixed-width: 28rem;
+
+  --clr-pink: hsl(337, 80%, 75%);
+  /********************/
+  --clr-purple: #4b145b;
+  --clr-red-special: #b4345c;
+  --clr-grey-special: #eae6eb;
+
+  /************/
+  /* dark shades of primary color BLUE PALETE*/
+  --blue-primary-1: hsl(205, 86%, 17%);
+  --blue-primary-2: hsl(205, 77%, 27%);
+  --blue-primary-3: hsl(205, 72%, 37%);
+  --blue-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --blue-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --blue-primary-6: hsl(205, 89%, 70%);
+  --blue-primary-7: hsl(205, 90%, 76%);
+  --blue-primary-8: hsl(205, 86%, 81%);
+  --blue-primary-9: hsl(205, 90%, 88%);
+  --blue-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --blue-grey-1: hsl(209, 61%, 16%);
+  --blue-grey-2: hsl(211, 39%, 23%);
+  --blue-grey-3: hsl(209, 34%, 30%);
+  --blue-grey-4: hsl(209, 28%, 39%);
+
+  /*terracota color palette*/
+  /* dark shades of primary color GREEN PALETE*/
+  --trcota-primary-1: #33180e;
+  --trcota-primary-2: #5f2d1a;
+  --trcota-primary-3: #d27e5f;
+  --trcota-primary-4: #f3ded7;
+  --trcota-primary-5: rgb(243, 222, 215, 0.25);
+
+  /* primary/main color */
+
+  /* lighter shades of primary color */
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+
+  /* --font-body:  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    margin:0; */
+  /*---------*/
+
+  /* --font-body: Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans,
+    Arial, sans-serif; */
+  --font-body: 'Montserrat', Trebuchet MS, Lucida Grande, Arial;
+
+  margin: 0;
+
+  --clr-bg-body: hsl(162, 80%, 75%);
+
+  --clr-bg-body: var(--trcota-primary-5);
+
+  color: var(--clr-grey-9);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+/*  global classes */
+
+/* section */
+
+/*
+================
+04 Accordion
+================
+*/
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg-body);
+}
+
+.title {
+  margin: 1rem auto 0 auto;
+  text-align: center;
+  color: var(--clr-white);
+}
+
+.underline {
+  height: 0.25rem;
+  width: 12rem;
+  background-color: var(--blue-primary-2);
+  margin: 0.25rem auto;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex: 40%;
+  justify-content: space-between;
+  background-color: #fff;
+  max-width: 80vw;
+  max-height: auto;
+  border-radius: var(--radius);
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+}
+/*ver*/
+/**/
+.container h3 {
+  font-size: 1.5rem;
+}
+
+.container section {
+  /* width: 90vw; */
+  margin: 0 auto;
+  max-width: 80%;
+}
+.card-container {
+  /* margin-bottom:2rem;
+  margin-right:2rem; */
+  margin: 0 2rem 2rem;
+}
+.card-content {
+  /* max-width: var(--max-width); */
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--light-shadow);
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+  align-items: center;
+}
+.card-content button {
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--clr-grey-special);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-content span.plus {
+  color: blue;
+  font-size: 0.75rem;
+}
+.card-content span.minus {
+  color: red;
+  font-size: 0.75rem;
+}
+
+.card-content p {
+  text-align: justify;
+  margin-top: 1rem;
+  width: 20rem;
+}
+
+.card-container:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+/*
+================
+05 Menu
+================
+*/
+main {
+  width: 80vw;
+  height: 80vh;
+  max-height: 80vh;
+  margin: 3rem auto;
+  background-color: transparent;
+  color: inherit;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.title {
+  color: var(--trcota-primary-1);
+}
+
+.underline {
+  height: 0.25rem;
+  width: 10rem;
+  background-color: var(--trcota-primary-2);
+  margin-bottom: 2rem;
+}
+.btns-container {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-btn {
+  color: var(--trcota-primary-2);
+  line-height: 1.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.filter-btn:hover {
+  transform: scale(1.1);
+  color: var(--trcota-primary-1);
+}
+
+.active {
+  border-bottom: 0.1rem solid var(--trcota-primary-2);
+}
+
+.menu {
+  max-width: 1170px;
+  height: auto;
+  /* background-color: orange; */
+  margin-top: 2rem;
+  display: grid;
+  padding: 0.1rem;
+  justify-items: center;
+}
+
+.menu-item {
+  margin-bottom: 1rem;
+
+  display: grid;
+
+  gap: 1rem 2rem;
+  max-width: 25rem;
+}
+
+.menu-item .item-img {
+  box-sizing: border-box;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.menu-info .head {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0px dotted rgba(128, 128, 128, 1);
+  font-size: 0.5rem;
+}
+
+.info-title {
+  margin-bottom: 0.5rem;
+  color: var(--trcota-primary-2);
+}
+
+.menu-info .food-desc {
+  margin-bottom: 0;
+  padding-top: 0.25rem;
+  margin-right: 0.5rem;
+  text-align: justify;
+}
+
+.price {
+  color: var(--trcota-primary-2);
+  padding: 0 3px;
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .item-img {
+    height: 175px;
+    width: 100%;
+  }
+}
